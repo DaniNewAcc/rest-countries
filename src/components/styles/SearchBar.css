@@ -1,0 +1,20 @@
+.search::-webkit-search-cancel-button, .search-light::-webkit-search-cancel-button {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 20px;
+    position: relative;
+    right: .5rem;
+    outline: 0;
+    width: 20px;
+    -webkit-appearance: none;
+}
+
+.search::-webkit-search-cancel-button {
+    background-image: url('../../assets/icon-dark.svg');
+}
+
+.search-light::-webkit-search-cancel-button {
+    background-image: url('../../assets/icon-light.svg');
+}

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@layer base {
+  :root {
+    --content: 200deg 15% 8%;
+    --input: 0deg 0% 52%;
+    --bkg: 0deg 0% 98%;
+    --paragraph: 0deg 0% 00%;
+    --elements-dark: 209deg 23% 22%;
+    --bkg-dark: 207deg 26% 17%;
+    
+    --ff: "Nunito Sans", sans-serif;
+    --fs-home: 14px;
+  }
+  
+}
+
+body {
+  font-family: var(--ff);
+  font-size: var(--fs-home);
+  margin: 0 auto;
+  min-height: 100vh;
+  min-width: 320px;
+  overflow-x: hidden;
+  transition: all .3s;
+  text-align: center;
+}
+
+select, option {
+  appearance: none;
+}
