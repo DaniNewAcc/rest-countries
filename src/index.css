@@ -23,7 +23,7 @@
 body {
   font-family: var(--ff);
   font-size: var(--fs-home);
-  margin: 0 auto;
+  margin: auto;
   min-height: 100vh;
   min-width: 320px;
   overflow-x: hidden;
