@@ -17,7 +17,18 @@
     --ff: "Nunito Sans", sans-serif;
     --fs-home: 14px;
   }
-  
+}
+
+
+.light {
+  --bg: hsl(0 0 98%);
+}
+.dark {
+  --bg: hsl(207, 26%, 17%)
+}
+
+html, body {
+  background-color: var(--bg);
 }
 
 body {

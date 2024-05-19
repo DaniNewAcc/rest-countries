@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script type="text/javascript">
+      if(window.localStorage.getItem('theme') === 'dark'){
+        document.documentElement.classList.add('dark');
+      }
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -10,20 +15,43 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const classList = document.documentElement.classList;
+        const style = document.documentElement.style
+
+        const dark = window.matchMedia("(prefers-color-scheme: dark)");
+
+        const update = () => {
+          if (localStorage.theme === "dark" ||
+          (!localStorage.theme && dark.matches)
+        ) {
+            classList.add("dark");
+            classList.remove("light");
+            style.colorScheme = "dark";
+          } else {
+            classList.add("light");
+            classList.remove("dark");
+            style.colorScheme = "light";
+          }
+        };
+        update();
+
+        if(dark instanceof EventTarget) {
+          dark.addEventListener('change', () => {
+            update();
+          })
+        } else {
+          dark.addEventListener(() => {
+            update();
+          })
+        }
+        window.addEventListener('storage', update);
+      })();
+    </script>
     <title>REST Countries</title>
   </head>
-  <body style="visibility: hidden;">
-    <script>
-      let domReady = (cb) => {
-        document.readyState === 'interactive' || document.readyState === 'complete'
-        ? cb()
-        : document.addEventListener('DOMContentLoaded', cb);
-      }
-
-      domReady(() => {
-        document.body.style.visibility = 'visible';
-      })
-    </script>
+  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
