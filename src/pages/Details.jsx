@@ -20,7 +20,7 @@ export default function Details() {
 
 
   return (
-    <>
+    <main role='main'>
       <Header />
       <BackBtn />
       { country ? 
@@ -63,6 +63,6 @@ export default function Details() {
         </section>
       </article>
      : null }
-    </>
+    </main>
   );
 }

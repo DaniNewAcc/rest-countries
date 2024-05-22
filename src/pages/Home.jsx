@@ -18,7 +18,7 @@ export default function Home({ title }) {
     document.title = title
 
     return (
-        <>
+        <main>
             {!filteredRegion ? <Spinner /> : 
             <>
                 <Header />
@@ -32,6 +32,6 @@ export default function Home({ title }) {
                 </section>
             </>
             }
-        </>
+        </main>
     )
 }
