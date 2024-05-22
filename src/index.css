@@ -27,7 +27,7 @@
   --bg: hsl(207, 26%, 17%)
 }
 
-html, body {
+html, body, #root {
   background-color: var(--bg);
 }
 

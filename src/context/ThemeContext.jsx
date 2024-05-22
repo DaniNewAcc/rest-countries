@@ -5,7 +5,7 @@ export const ThemeContext = createContext();
 
 
 export function ThemeContextProvider ({ children }) {
-    const initialTheme = () => localStorage.getItem('theme');
+    const initialTheme = localStorage.getItem('theme');
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const [theme, setTheme] = useState(initialTheme);
     const toggleTheme = () => {
