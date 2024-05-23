@@ -74,9 +74,9 @@ export default function Filter( { selectedRegion, onFilter } ) {
   
   return (
     <>
-      <div className="flex ms-0 md:my-8 md:-me-[.1rem]">
-        <Select styles={customStyles} className='dark:text-white dark:bg-darkElements text-content shadow-component transition-all duration-[.3s] text-start' isClearable value={selectedRegion} onChange={onFilter} options={selectableRegions} placeholder='Filter by Region' />
-      </div>
+      <label htmlFor='select' className="flex ms-0 md:my-8 md:-me-[.1rem]">
+        <Select styles={customStyles} className='dark:text-white dark:bg-darkElements text-content shadow-component transition-all duration-[.3s] text-start' isClearable value={selectedRegion} onChange={onFilter} options={selectableRegions} placeholder='Filter by Region' inputId='select' />
+      </label>
     </>
   )
 }

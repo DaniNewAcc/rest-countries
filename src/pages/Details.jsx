@@ -20,7 +20,7 @@ export default function Details() {
 
 
   return (
-    <main role='main'>
+    <main>
       <Header />
       <BackBtn />
       { country ? 
