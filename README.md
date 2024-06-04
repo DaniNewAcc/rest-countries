@@ -2,6 +2,8 @@
 
 This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
+As i'm speaking, api is really slow and doesn't load correctly the page so i need to rework all the project with a local solution with a .json file, i'm sorry that the project can't be viewed as a web page, i'll update it as soon as possible.
+
 ## Table of contents
 
 - [Overview](#overview)
